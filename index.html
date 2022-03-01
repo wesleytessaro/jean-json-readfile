@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>Conversor</title>
+</head>
+
+<body>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/1134/1134437.png"
+                    alt="Bulma: Free, open source, and modern CSS framework based on Flexbox">
+                <b>
+                    <h1 class="negrito">Conversor-Jean</h1>
+                </b>
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+    </nav>
+    <div>
+        <p>
+            <label for="">Tratamento</label>
+            <input class="input is-large" type="text" placeholder="Tratamento" id="tratamento">
+
+        </p>
+        <br>
+        <p>
+            <label for="">Amostra na transeção </label>
+            <input class="input is-large" type="text" placeholder="Amostra na transeção" id="transecao">
+        </p>
+        <br>
+        <p>
+            <label for="">Distância</label>
+            <input class="input is-large" type="text" placeholder="Distância" id="distancia">
+
+        </p>
+    </div>
+    <br>
+
+    <div class="file has-name is-boxed">
+        <label class="file-label">
+            <input onchange="ler(this)" class="file-input" type="file" accept=".json" name="file-id">
+            <span class="file-cta">
+                <span class="file-icon">
+                    <i class="fas fa-upload"></i>
+                </span>
+                <span class="file-label">
+                    Escolha um arquivo
+                </span>
+            </span>
+            <span class="file-name" id="file-name">
+                Nenhum selecionado
+            </span>
+        </label>
+    </div>
+    <br>
+    <div style="padding: 10px">
+        <h1 class="negrito">
+            Dados
+        </h1>
+        <table id="tabela1" border="1">
+            <tr>
+                <td>Descrição</td>
+                <td>Dados</td>
+            </tr>
+        </table>
+        <br>
+        <h1 class="negrito">
+            Resultados
+        </h1>
+        <table id="tabela2" border="1">
+            <tr>
+                <td>Distância</td>
+                <td>Resistência</td>
+                <td>Umidade</td>
+                <td>RP (MPa) </td>
+                <td>Teta (m3 m-3)</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
+
+<style>
+    .negrito {
+        font-weight: bold;
+    }
+</style>
