@@ -28,8 +28,10 @@ function ler(input) {
   reader.readAsText(file);
 
   reader.onload = function () {
-    console.log(reader.result);
-    let texto=reader.result.replace(/\n/g, " ")
+    
+    texto=reader.result.replace(/(\r\n|\n|\r)/gm," ");
+	texto=texto.replace(/\s+/g,"");
+	console.log(texto);
     let jsonArquivos = JSON.parse(texto);
     //Recupera as informações do campo dos formulários
     tabela = document.getElementById("tabela1");
