@@ -29,7 +29,8 @@ function ler(input) {
 
   reader.onload = function () {
     console.log(reader.result);
-    let jsonArquivos = JSON.parse(reader.result);
+    let texto=reader.result.replace(/\n/g, " ")
+    let jsonArquivos = JSON.parse(texto);
     //Recupera as informações do campo dos formulários
     tabela = document.getElementById("tabela1");
     tabela.innerHTML = "";
