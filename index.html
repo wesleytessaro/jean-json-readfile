@@ -47,8 +47,20 @@
         </p>
     </div>
     <br>
+    <p>
+        <label for="">Valor em texto</label><br>
 
+
+    <div>
+        <textarea class="textarea" id="textarea-json" placeholder="JSON"></textarea>
+    </div>
+    <button class="button is-primary" onclick="importarUsandoBotao()">Importar</button>
+    </p>
+    <br>
+    <p>
     <div class="file has-name is-boxed">
+        <label for="">Ou Importe os dados</label><br>
+
         <label class="file-label">
             <input onchange="ler(this)" class="file-input" type="file" accept=".json" name="file-id">
             <span class="file-cta">
@@ -64,6 +76,7 @@
             </span>
         </label>
     </div>
+    </p>
     <br>
     <div style="padding: 10px">
         <h1 class="negrito">
